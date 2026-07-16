@@ -1,0 +1,15 @@
+{
+  "_captured_at": "2026-07-16T13:20:00Z",
+  "_captured_run_id": "r_da28f824c44c46db9431337521ee19e3",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Wrote workx.boundary_coords (5 rows, 2 columns).",
+    "NOTE: Wrote workx.points_df (6 rows, 3 columns).",
+    "NOTE: Wrote workx.boundary_corners (4 rows, 2 columns).",
+    "NOTE: Table workx.centroid created.",
+    "NOTE: PROC PRINT completed: 6 observations printed, 4 variables"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

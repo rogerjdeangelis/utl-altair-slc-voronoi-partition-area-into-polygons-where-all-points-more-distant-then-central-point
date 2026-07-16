@@ -1,0 +1,66 @@
+NOTE: Jenner v1.5.30 (build v1.5.30+unknown.20260715T062217Z.x86_64-unknown-linux-gnu)
+
+NOTE: Unrecognized statement 'Options' in PROC DATASETS, ignoring.
+NOTE: Option OBS changed to 100.
+NOTE: Library WORKX assigned path=./work.
+NOTE: PROC DATASETS library=WORKX
+
+NOTE: 
+                       Directory
+
+       Libref             WORKX
+       Engine             V9
+       Physical Name      ././work
+
+       (no members)
+
+NOTE: NOTE: KILL option deleted 0 member(s) from library WORKX.
+NOTE: DATA workx.boundary_coords
+
+NOTE: Processing inline DATALINES (5 lines)
+
+NOTE: Read 5 rows from DATALINES.
+NOTE: Wrote workx.boundary_coords (5 rows, 2 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA workx.points_df
+
+NOTE: Processing inline DATALINES (6 lines)
+
+NOTE: Read 6 rows from DATALINES.
+NOTE: Wrote workx.points_df (6 rows, 3 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA workx.boundary_corners
+
+
+NOTE: Read 5 rows from workx.boundary_coords.
+NOTE: Wrote workx.boundary_corners (4 rows, 2 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SQL 
+
+NOTE: Table workx.centroid created.
+NOTE: PROC SQL statement used.
+NOTE: DATA workx.point_distances
+
+
+NOTE: Read 6 rows from workx.points_df.
+NOTE: Wrote workx.point_distances (6 rows, 6 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC SORT data=workx.point_distances
+
+NOTE: Read 6 rows from workx.point_distances.
+NOTE: Wrote workx.point_distances_sorted (6 rows, 6 columns).
+NOTE: PROC SORT statement used.
+NOTE: Option TITLE changed to Six generating points ranked by distance from the parallelogram centroid.
+NOTE: PROC PRINT data=workx.point_distances_sorted
+
+NOTE: PROC PRINT completed: 6 observations printed, 4 variables
+NOTE: PROC MEANS
+NOTE: PROC MEANS statement used.

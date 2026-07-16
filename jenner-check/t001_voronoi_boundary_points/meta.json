@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_voronoi_boundary_points",
+  "source_file": "utl-altair-slc-voronoi-partition-area-into-polygons-where-all-points-more-distant-then-central-point.sas",
+  "source_blob_sha": "1a4a0d60b7486a3a92fa14a58eab17386b98e4b0",
+  "source_commit": "8c22d5e55710d609e7ec042946b04e1f930c4efe",
+  "notes": "Original script builds WORKX.BOUNDARY_COORDS and WORKX.POINTS_DF via cards4 DATA steps (kept byte-identical: same coordinates, validvarname=v7, id=_n_), then hands both off to PROC R (deldir/sf/ggplot2) to draw a Voronoi partition and PDF. PROC R and its R package dependencies aren't reachable from a hosted SAS engine, so this bundle keeps both DATA steps verbatim and replaces the R hand-off with the SAS-native computation the R code was actually performing for the repo's stated claim: distance of each of the six generating points to the parallelogram boundary's centroid (\"the central point\"), via PROC SQL + PROC SORT + PROC PRINT + PROC MEANS. libname target path changed from d:/wpswrkx to ./work."
+}
